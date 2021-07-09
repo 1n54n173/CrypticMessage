@@ -1,29 +1,24 @@
-## Two Step Encryption
-### Introduction
-Applying Steganography followed by Visual Cryptography. Implementation based on the research paper titled **"Combine use of Steganography and Visual  Cryptography for Secured Data hiding in Computer Forensics"**
+# CrypticMessage
+## Introduction
+Applying Steganography followed by Visual Cryptography.The proposed work is basically a framework designed with two modules i.e. Steganography using Genetic
+Algorithm and Visual Cryptography. An input image is accepted as cover image for the input message in plain text format. After embedding the secret message in LSB (least
+significant bit) of the cover image, the pixel values of the steg-image are modified by the visual cryptography to keep their statistic characters.
 
 Steganography is the method of hiding secret data inside any form of digital media. The main idea behind steganography is to hide the existence of a data in any medium like audio, video, image etc.
 
 Visual cryptography is a cryptographic technique which allows visual information (pictures, text, etc.) to be encrypted in such a way that the decrypted information appears as a visual image.
 
-### Architecture
+## Architecture
+![image](https://user-images.githubusercontent.com/56619771/125083171-ae387400-e0e5-11eb-861c-3f71b43b8152.png)
+
+
 ![image](https://i.imgur.com/nh0J1Sn.png)
 
-### Project
-##### Structure
-```
-.
-├── images
-├── main.py
-├── README.md
-├── Reference_paper.pdf
-├── requirements.txt
-└── src
-    ├── lsb_stegno.py
-    └── n_share.py
-```
 
-##### File description
+## Project
+
+
+### File description
 | File          | Description                                    |
 |---------------|-----------------------------------------------------------|
 | lsb_stegno.py | Methods to Encode and Decode data using LSB Steganography |
@@ -70,15 +65,3 @@ img2[i, j, k] = data[i, j, k] - n
 ```python
 img[i, j, k] = img1[i, j, k] + img2[i, j, k]
 ```
-
-##### Usage
-###### Setup
-Install dependencies
-```
-pip install -r requirements.txt
-```
-Run using python
-```
-streamlit run main.py
-```
-
